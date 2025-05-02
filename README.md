@@ -173,11 +173,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Contributors
 
-- [Peddineni Sowjanya](https://github.com/yourusername)
+- [Peddineni Sowjanya](https://github.com/Peddineni-Sowjanya)
 - [Koshireddy Shanmukhi](https://github.com/shanmukhikoshireddy)
-- [K Rukmini](https://github.com/yourusername)
-- [Boddu Teja](https://github.com/yourusername)
-- [K kusuma](https://github.com/yourusername)
+- [Kondeti Rukmini](https://github.com/KondetiRukmini)
+- [Boddu Teja](https://github.com/BodduTeja)
+- [K kusuma](https://github.com/kusuma)
 
 ## 🙏 Acknowledgements
 
