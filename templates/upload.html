@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="upload-page">
+    <div class="upload-card">
+        <div class="upload-header">
+            <h2>Upload Your Fingerprint</h2>
+            <p>Please upload a clear image of your fingerprint for analysis</p>
+        </div>
+
+        {% if error %}
+        <div class="error-message">
+            <i class="fas fa-exclamation-circle"></i> Error: {{ error }}
+        </div>
+        {% endif %}
+
+        <form method="POST" enctype="multipart/form-data" class="upload-form">
+            <div class="file-upload">
+                <label for="file" class="upload-label">
+                    <i class="fas fa-fingerprint"></i>
+                    <span>Choose Fingerprint Image</span>
+                </label>
+                <input type="file" id="file" name="file" accept="image/*" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg analyze-button">
+                Analyze <i class="fas fa-search"></i>
+            </button>
+        </form>
+
+        {% if result %}
+        <div class="result-container">
+            <h3>Analysis Results</h3>
+            <div class="result-box">
+                <i class="fas fa-tint blood-icon"></i>
+                <h4>Your Blood Group is: <span class="blood-group">{{ result }}</span></h4>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

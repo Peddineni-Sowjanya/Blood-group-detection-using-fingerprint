@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="ready-landing">
+    <div class="ready-container">
+        <!-- Left Side with Image -->
+        <div class="image-section">
+            <img src="{{ url_for('static', filename='images/fingerprint-scan.png') }}" alt="Fingerprint Scan" class="landing-image">
+        </div>
+
+        <!-- Right Side with Content -->
+        <div class="text-section">
+            <h1 class="main-title">Welcome to the Future of Blood Testing</h1>
+            <p class="subtitle">Our AI-powered system makes blood group detection quick and painless.</p>
+
+            <h2 class="question">Are you ready to experience pain-free blood group testing?</h2>
+            <p class="highlight">No needles, no pain — just a simple fingerprint scan.</p>
+
+            <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg next-button">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

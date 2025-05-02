@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="landing-page" style="margin-top: -30px;" >
+    <div class="project-title">
+        <h1 class="curvy-font" style="color: red;">Fingerprint Based Blood Group Detection</h1>
+    </div>
+
+    <div class="circular-layout"">
+        <!-- Central Blood Icon -->
+        <div class="central-blood-icon">
+            <i class="fas fa-tint" style="color: red;"></i>
+        </div>
+
+
+        <!-- Blood Group Icons in Circle -->
+        <div class="blood-group-circle" style="padding: 170px 260px;">
+            <div class="icon-container" style="--angle: 0deg;background-color: red;">
+                <i class="fas fa-tint blood-icon a-plus"></i>
+                <span>A+</span>
+            </div>
+            <div class="icon-container" style="--angle: 45deg;background-color: red;">
+                <i class="fas fa-tint blood-icon a-minus"></i>
+                <span>A-</span>
+            </div>
+            <div class="icon-container" style="--angle: 90deg;background-color: red;">
+                <i class="fas fa-tint blood-icon b-plus"></i>
+                <span>B+</span>
+            </div>
+            <div class="icon-container" style="--angle: 135deg;background-color: red;">
+                <i class="fas fa-tint blood-icon b-minus"></i>
+                <span>B-</span>
+            </div>
+            <div class="icon-container" style="--angle: 180deg;background-color: red;">
+                <i class="fas fa-tint blood-icon ab-plus"></i>
+                <span>AB+</span>
+            </div>
+            <div class="icon-container" style="--angle: 225deg;background-color: red;">
+                <i class="fas fa-tint blood-icon ab-minus"></i>
+                <span>AB-</span>
+            </div>
+            <div class="icon-container" style="--angle: 270deg;background-color: red;">
+                <i class="fas fa-tint blood-icon o-plus"></i>
+                <span>O+</span>
+            </div>
+            <div class="icon-container" style="--angle: 315deg;background-color:red">
+                <i class="fas fa-tint blood-icon o-minus" ></i>
+                <span>O-</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="start-button-container" style="margin-top: -120px";>
+        <a href="{{ url_for('start') }}" class="btn btn-primary btn-sm start-button">
+            <span class="button-text">Start Test</span>
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+{% endblock %} 

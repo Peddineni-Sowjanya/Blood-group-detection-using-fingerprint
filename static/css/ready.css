@@ -1,0 +1,82 @@
+.ready-landing {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff5f5;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.ready-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(220, 20, 60, 0.2);
+    overflow: hidden;
+}
+
+.image-section {
+    flex: 1;
+    background-color: #ffeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.landing-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.text-section {
+    flex: 1;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-title {
+    font-size: 32px;
+    color: #b30000;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 32px;
+}
+
+.question {
+    font-size: 24px;
+    color: #800000;
+    margin-bottom: 12px;
+}
+
+.highlight {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 32px;
+}
+
+.next-button {
+    font-size: 18px;
+    padding: 12px 24px;
+    background-color: crimson;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.next-button:hover {
+    background-color: darkred;
+}

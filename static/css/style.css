@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #e63946;
+    --secondary-color: #1d3557;
+    --background-color: #f1faee;
+    --text-color: #2b2d42;
+    --red-gradient: linear-gradient(135deg, rgba(255, 77, 77, 0.8), rgba(204, 0, 0, 0.8));
+    --dull-red: rgba(230, 57, 70, 0.7);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Landing Page Styles */
+.landing-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Project Title */
+.project-title {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 3rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.curvy-font {
+    font-family: '', ;
+    font-size: 4rem;
+    color: white;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
+    margin:0;
+    font-weight: bold;
+}
+
+/* Circular Layout */
+.circular-layout {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+/* Central Blood Icon */
+.central-blood-icon {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* animation: pulse 2s infinite; */
+    z-index: 2;
+}
+
+.central-blood-icon i {
+    font-size: 6rem;
+    color: white;
+    animation: rotate 10s linear infinite;
+}
+
+/* Blood Group Circle */
+.blood-group-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.icon-container {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    transform-origin: center;
+    animation: float 3s ease-in-out infinite;
+    animation-delay: calc(var(--angle) * 0.1s);
+}
+
+.icon-container:hover {
+    transform: scale(1.2) rotate(360deg);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.blood-icon {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.icon-container span {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Position blood group icons in a circle */
+.icon-container {
+    transform: rotate(var(--angle)) translate(200px) rotate(calc(-1 * var(--angle)));
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: rotate(var(--angle)) translate(200px) rotate(calc(-1 * var(--angle))) translateY(0px); }
+    50% { transform: rotate(var(--angle)) translate(200px) rotate(calc(-1 * var(--angle))) translateY(-10px); }
+    100% { transform: rotate(var(--angle)) translate(200px) rotate(calc(-1 * var(--angle))) translateY(0px); }
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Start Button */
+.start-button-container {
+    position: relative;
+    z-index: 1;
+    margin-top: 2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.start-button {
+    background: white;
+    color: red;
+    border: solid;
+    border-width: 4px;
+    border-color:red;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.start-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+    background-color: red;
+    border-color: white;
+}
+
+.button-text {
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .curvy-font {
+        font-size: 1rem;
+    }
+    
+    .circular-layout {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .central-blood-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .central-blood-icon i {
+        font-size: 2.5rem;
+    }
+    
+    .icon-container {
+        width: 50px;
+        height: 50px;
+        transform: rotate(var(--angle)) translate(125px) rotate(calc(-1 * var(--angle)));
+    }
+    
+    .blood-icon {
+        font-size: 1.5rem;
+    }
+    
+    .icon-container span {
+        font-size: 0.8rem;
+    }
+    
+    .start-button {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* Ready Page Styles */
+.ready-page {
+    min-height: 100vh;
+}
+
+.split-screen {
+    display: flex;
+    height: 100vh;
+}
+
+.left-half, .right-half {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.left-half {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.right-half {
+    background-color: var(--background-color);
+}
+
+/* Login Page Styles */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.login-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form {
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Upload Page Styles */
+.upload-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.upload-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.file-upload {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.upload-label {
+    display: block;
+    padding: 2rem;
+    border: 2px dashed var(--secondary-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-label:hover {
+    background-color: rgba(29, 53, 87, 0.1);
+}
+
+.result-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.result-box {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.blood-group {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Keep existing styles for other pages */
+/* ... existing code ... */ 
+
+.ready-landing {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff5f5;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.ready-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(220, 20, 60, 0.2);
+    overflow: hidden;
+}
+
+.image-section {
+    flex: 1;
+    background-color: #ffeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.landing-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.text-section {
+    flex: 1;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-title {
+    font-size: 32px;
+    color: #b30000;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 32px;
+}
+
+.question {
+    font-size: 24px;
+    color: #800000;
+    margin-bottom: 12px;
+}
+
+.highlight {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 32px;
+}
+
+.next-button {
+    font-size: 18px;
+    padding: 12px 24px;
+    background-color: crimson;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.next-button:hover {
+    background-color: darkred;
+}
+
+
+.login-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff5f5;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(220, 20, 60, 0.2);
+    width: 100%;
+    max-width: 500px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h2 {
+    color: #b30000;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: #555;
+    font-size: 16px;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #333;
+    font-weight: 500;
+}
+
+.login-form .form-control {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.2s;
+}
+
+.login-form .form-control:focus {
+    border-color: crimson;
+    outline: none;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 18px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.login-button:hover {
+    background-color: darkred;
+}
+
+.upload-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff5f5;
+    padding: 30px 15px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.upload-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(220, 20, 60, 0.15);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.upload-header h2 {
+    color: #b30000;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.upload-header p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.error-message {
+    background-color: #ffcccc;
+    color: #a70000;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.file-upload {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.upload-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f0f0f0;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 2px dashed crimson;
+    color: #b30000;
+    transition: background 0.3s;
+}
+
+.upload-label:hover {
+    background-color: #ffeaea;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.analyze-button {
+    background-color: crimson;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    border: none;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.analyze-button:hover {
+    background-color: darkred;
+}
+
+.result-container {
+    margin-top: 40px;
+}
+
+.result-box {
+    background-color: #fff0f0;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid crimson;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.result-box .blood-icon {
+    color: crimson;
+    font-size: 32px;
+}
+
+.result-box .blood-group {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b30000;
+}
