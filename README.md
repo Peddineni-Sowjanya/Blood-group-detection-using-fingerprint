@@ -10,7 +10,7 @@
 This project implements a deep learning solution for predicting blood groups directly from fingerprint scans using Convolutional Neural Networks. The system analyzes fingerprint images to identify unique patterns that correlate with different blood types, potentially providing a quick, non-invasive alternative to traditional blood typing methods.
 
 <div align="center">
-  <img src="fingerprint_sample.jpg" alt="Fingerprint Sample" width="300"/>
+  <img src="Fingerprint_sample.jpg" alt="Fingerprint Sample" width="300"/>
   <p><i>Sample fingerprint image from our dataset</i></p>
 </div>
 
