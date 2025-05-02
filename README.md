@@ -10,7 +10,7 @@
 This project implements a deep learning solution for predicting blood groups directly from fingerprint scans using Convolutional Neural Networks. The system analyzes fingerprint images to identify unique patterns that correlate with different blood types, potentially providing a quick, non-invasive alternative to traditional blood typing methods.
 
 <div align="center">
-  <img src="fingerprint_sample.dib" alt="Fingerprint Sample" width="300"/>
+  <img src="fingerprint_sample.jpg" alt="Fingerprint Sample" width="300"/>
   <p><i>Sample fingerprint image from our dataset</i></p>
 </div>
 
@@ -33,10 +33,15 @@ The dataset contains 8,000 fingerprint images across 8 blood group classes:
 Each image has been preprocessed to standardized dimensions (128x128 pixels) and normalized to enhance pattern recognition.
 
 ## 🧠 Model Architecture
-
+Here is the basic Architecture
+<div align="center">
+  <img src="Architecture.jpeg" alt="Architecture" width="300"/>
+  <p><i>Sample fingerprint image from our dataset</i></p>
+</div>
 We've implemented a CNN with Layer Normalization for improved training stability:
 
 ```
+
 Model: Sequential
 _________________________________________________________________
 Layer (type)                Output Shape              Param #   
@@ -74,7 +79,7 @@ The model achieved strong performance across all blood groups:
 ### Confusion Matrix
 
 <div align="center">
-  <img src="confusion_matrix.jpeg" alt="Confusion Matrix" width="600"/>
+  <img src="Confusion_matrix.jpeg" alt="Confusion Matrix" width="600"/>
 </div>
 
 ### Classification Report
@@ -99,7 +104,7 @@ weighted avg       0.87      0.87      0.87      2000
 ### Training Performance
 
 <div align="center">
-  <img src="evaluation.jpeg" alt="Training Performance" width="600"/>
+  <img src="Evaluation.jpeg" alt="Training Performance" width="600"/>
 </div>
 
 ## 📱 User Interface
@@ -168,7 +173,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Contributors
 
-- [Your Name](https://github.com/yourusername)
+- [Peddineni Sowjanya](https://github.com/yourusername)
+- [Koshireddy Shanmukhi](https://github.com/shanmukhikoshireddy)
+- [K Rukmini](https://github.com/yourusername)
+- [Boddu Teja](https://github.com/yourusername)
+- [K kusuma](https://github.com/yourusername)
 
 ## 🙏 Acknowledgements
 
